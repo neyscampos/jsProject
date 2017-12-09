@@ -39,7 +39,17 @@
 		}
 
 		function mostra() {
-			$(".saida").html(gnome.join(" </br>"));
+			
+			var txtSaida = "<ul class=\"list-group\">";
+			
+			for(i = 0; i < gnome.length; i++ ){
+				txtSaida += "<li class=\"list-group-item\">" + gnome[i] + "</li>"
+			}
+			txtSaida += "</ul>";
+			$(".saida").html(txtSaida);
+			//$(".saida").html(gnome.join(" </br>"));
+			
+
 		}
 
 		function tamanho() {
